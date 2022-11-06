@@ -1,0 +1,50 @@
+{
+  "name": "nodejs-streams",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edmilson-torres/nodejs-streams.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edmilson-torres/nodejs-streams/issues"
+  },
+  "homepage": "https://github.com/edmilson-torres/nodejs-streams#readme",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "npm run clean && tsc",
+    "start": "node ./dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "lint": "eslint ./src --ext .ts",
+    "lint:fix": "eslint ./src --ext .ts --fix",
+    "prettier": "prettier --check src/**/*.ts",
+    "prettier:fix": "prettier --write src/**/*.ts"
+  },
+  "keywords": [
+    "Node.js",
+    "Streams",
+    "CSV"
+  ],
+  "author": "Edmilson Torres <edmilson.torres@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/amqplib": "^0.8.2",
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.3",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^2.7.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
