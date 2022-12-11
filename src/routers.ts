@@ -1,8 +1,8 @@
-import { Router } from 'express';
+import Router from 'express';
+import { csvToJsonController } from './controller';
+
 const router = Router();
 
-router.get('/ping', async (req, res) => {
-    return res.json({ message: 'pong' });
-});
+router.post('/', csvToJsonController);
 
 export default router;
