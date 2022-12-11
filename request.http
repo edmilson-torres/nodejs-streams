@@ -1,0 +1,38 @@
+// 100 rows
+POST http://localhost:3000 
+Content-Type: application/json
+
+{
+    "data": {
+        "link": "https://github.com/datablist/sample-csv-files/raw/main/files/organizations/organizations-100.csv",
+        "delimiter": ","
+    }
+}
+
+###
+
+// Big file
+POST http://localhost:3000 
+Content-Type: application/json
+
+{
+    "data": {
+        "link": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+        "delimiter": ","
+    }
+
+}
+
+###
+
+// Error
+POST http://localhost:3000 
+Content-Type: application/json
+
+{
+    "data": {
+        "link": "https://www.google.com",
+        "delimiter": ","
+    }
+
+}
