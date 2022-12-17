@@ -1,12 +1,31 @@
 version: "3.9"
 
 services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=docker
+      - MONGO_INITDB_ROOT_PASSWORD=mongopw
+    ports:
+      - 27017:27017
+    volumes:
+      - data:/data/db
+
   app:
     build: .
     container_name: node-stream
     ports:
       - 3000:3000
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URL=mongodb://docker:mongopw@mongodb:27017/nodestream?authSource=admin
+      - PORT=3000
     deploy:
       resources:
         limits:
           memory: 80M
+
+volumes:
+  data:
