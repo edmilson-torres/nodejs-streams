@@ -1,6 +1,6 @@
 # Node.js Streams - convertendo CSV em JSON
 <p align="center"><a href="#">
-    <img align="center" width="450" src="" />
+    <img align="center" src="https://user-images.githubusercontent.com/64763336/208279366-5d676750-d743-4456-81ab-2fd2aa43fa14.png" />
   </a>
 
 ## 📄 Sobre
@@ -15,6 +15,11 @@ Atualmente existem 4 tipos de Streams:
 - Transform: é um tipo de Duplex onde os dados podem ser modificados.  
 
 Para a criação de um fluxo de 2 ou mais streams, são utlizados métodos e eventos, sendo o readable.pipe o responsável pela comunicação entre elas.  
+
+<p align="center"><a href="#">
+    <img align="center" src="https://user-images.githubusercontent.com/64763336/208279374-fe6ae1ff-acbf-4e4d-961c-dafd63342f49.png" />
+  </a>
+
 
 ## ⚙️ Rodando o projeto  
   
